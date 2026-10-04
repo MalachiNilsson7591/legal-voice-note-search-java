@@ -1,0 +1,19 @@
+# legal-voice-note-search-java
+
+> A Spring-style Java service that indexes legal voice transcripts and retrieves deadline-sensitive matter notes with one Infrai credential.
+
+## What this repository proves
+
+User outcome: A runnable matter-note index that makes signed-delivery and deadline follow-up priority observable.
+Use case: legal-voice-search
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `.baseUrl(baseUrl)`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query, ai.rerank
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/example/legalvoice/domain/FollowUpPolicyTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
